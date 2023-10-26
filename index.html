@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Funkoshop </title>
-    <link rel= "stylesheet " href="./css/index.css">
+     <link rel="stylesheet " href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css" >
+     <link rel="stylesheet " href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
+     <link rel="stylesheet " href="./css/index.css">
+    
 </head>
 <body>
     <header>
@@ -20,28 +23,28 @@
                     <a class="navbar__link with-icon" href="./pages/shop.html">SHOP<iconify-icon icon="mdi:chevron-down"></iconify-icon></a>
                     <ul class="submenu">
                       <li class="submenu__item">
-                        <a class="collection__link href=" class="submenu__item">funkos</a>
+                        <a class="collection__link" href=" class ="submenu__item">FUNKOS </a>
 
                       </li>
                       <li class="submenu__item">
-                        <a class="collection__link href="" class="submenu__item">Remeras</a>
+                        <a class="collection__link" href=" class="submenu__item">REMERAS</a>
 
                       </li>
                       <li class="submenu__item">
-                        <a class="collection__link href="" class="submenu__item">Llaveros</a>
+                        <a class="collection__link" href=" class="submenu__item">LLAVEROS</a>
 
                       </li>
 
                     </ul>
                 </li >
                 <li>
-                    <a class="navbar__link" href=./pages/contact.html">CONTACTO</a>
+                    <a class="navbar__link" href="./pages/contact.html">CONTACTO</a>
                 </li class="navbar__item">
                 <li>
-                    <a class="navbar__link" href=./pages/login.html">LOGIN</a>
+                    <a class="navbar__link" href="./pages/login.html">LOGIN</a>
                 </li class="navbar__item">
                 <li class="navbar__item">
-                    <a class="navbar__cart" href="./pages/cart.html">CARRITO</a>
+                    <a class="navbar__cart" href="./pages/cart.html"></a>
                     <img src="./img/icons/cart-icon.svg" alt="icono de carrito">
                 </li>
             </ul>
@@ -56,6 +59,8 @@
             <a class="hero__link" href="/pages/shop.html">SHOP</a>
             </article>
             </section>
+
+
     <main class="main-container">
         
                 <section class="collection container">
@@ -86,15 +91,16 @@
                         <p>Revive los recuerdos de una saga llena de magia y encanto.</p>
                         <a class="collection__link" href="./pages/shop">VER COLECCIÓN</a>
                     </article>
-                  
                    <picture class="collection__cover">
                     <img src="./img/harry-potter/snape-patronus-1.webp" alt="Figura coleccionable Funko del Patronus de snape en la pelicula de Harry Potter.">
                    </picture>
                 </section>
-                <section class="sliders container">
+
+                <section class="slider container glide">
                     <h2 class="slider__title">ÚLTIMOS LANZAMIENTOS</h2>
-                    <ul class="slider__items">
-                        <li class="slider__item">
+                    <div class="glide__track" data-glide-el="track">
+                    <ul class="slider__items glide__slides">
+                        <li class="slider__item glide__slides  ">
                             <article class="card-item">
                                 <a class="card-item__link" href="">
                                    <picture class="card-item__cover">
@@ -113,7 +119,7 @@
 
                             </article>
                         </li>
-                         <li class="slider__item">
+                         <li class="slider__item glide__slides ">
                             <article class="card-item" >
                                 <a class="card-item__link" href="">
                                     <picture class="card-item__cover">
@@ -133,7 +139,7 @@
                         </li>
 
 
-                         <li class="slider__item" >
+                         <li class="slider__item glide__slides" >
                             <article class="card-item">
                                 <a class="card-item__link" href="">
                                     <picture class="card-item__cover">
@@ -153,27 +159,32 @@
                             </article>
                         </li>
                     </ul>
+                </div>
+                <div class="glide__arrows" data-glide-el="controls">
+                    <button  class="glide__arrow glide__arrow--left" data-glide-dir="<"><iconify-icon icon="ic:sharp-chevron-left"></iconify-icon></button>
+                    <button  class="glide__arrow glide__arrow--right" data-glide-dir=">"><iconify-icon icon="ic:sharp-chevron-right"></iconify-icon></button>
+                  </div>
 
                 </section>
     </main>
-    <footer>
-        <section>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="./pages/shop.html">SHOP</a>
+    <footer class="footer">
+        
+            <nav class="navbar container">
+                <ul class="navbar__item">
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="./pages/shop.html">SHOP</a>
 
                     </li>
                     <li>
-                        <a href="./pages/register.html">REGISTRARSE</a>
+                        <a class="navbar__link" href="./pages/register.html">REGISTRARSE</a>
 
                     </li>
-                    <li>
-                        <a href="./pages/login.html">LOGIN</a>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="./pages/login.html">LOGIN</a>
 
                     </li>
-                    <li>
-                        <a href="./pages/contact.html">CONTACTO</a>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="./pages/contact.html">CONTACTO</a>
 
                     </li>
                 </ul>
@@ -183,11 +194,29 @@
 
             </nav>
            
-            <p>All rights reserved 2023 - Funkoshop &copy;</p>
-        </section>
+            <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
+        
 
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script >
+
+        new Glide ('.glide',{
+            type: "carousel",
+            startAt: 0,
+            perView: 3,
+            gap: 30,
+            breakpoint:{
+                991:{
+                    perView:2
+                } ,
+                768:{
+                    perView:1
+                }
+            }
+        } ). mount();
+    </script>
     
    
     
